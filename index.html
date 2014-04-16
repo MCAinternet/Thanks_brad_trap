@@ -15,6 +15,7 @@
     //
     function onDeviceReady() {
         playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
+        console.log("onDeviceReady()");
     }
 
     // Audio player
@@ -26,15 +27,14 @@
     //
     function playAudio(src) {
         console.log("function playAudio(src) is called on " + src );
-        if (my_media == null) {
             // Create Media object from src
             my_media = new Media(src, onSuccess, onError);
-        } // else play current audio
+        // else play current audio
         // Play audio
         my_media.play();
 
         // Update my_media position every second
-        if (mediaTimer == null) {
+        if (mediaTimer === null) {
             mediaTimer = setInterval(function() {
                 // get my_media position
                 my_media.getCurrentPosition(
