@@ -4,10 +4,6 @@
     id              = "com.mcainternet.trap"
     version         = "0.1">
 
-    <feature name="Media">
-    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
-    </feature>
-
     <name>MCATrap</name>
 
     <description>
@@ -18,6 +14,10 @@
         Brad Hagedorn
     </author>
     
-    <access origin="*" browserOnly="true"/>
+    <access origin="*" />
+    
+    <feature name="Media">
+    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+    </feature>
 
-</widget>config.xml
+</widget>
