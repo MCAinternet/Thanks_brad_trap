@@ -1,17 +1,17 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-              "http://www.w3.org/TR/html4/strict.dtd">
+                      "http://www.w3.org/TR/html4/strict.dtd">
 <html>
   <head>
     <title>Media Example</title>
 
-    <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
-    // Wait for Cordova to load
+    // Wait for device API libraries to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
 
-    // Cordova is ready
+    // device APIs are available
     //
     function onDeviceReady() {
         playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
@@ -25,9 +25,11 @@
     // Play audio
     //
     function playAudio(src) {
-        // Create Media object from src
-        my_media = new Media(src, onSuccess, onError);
-
+        console.log("function playAudio(src) is called on " + src );
+        if (my_media == null) {
+            // Create Media object from src
+            my_media = new Media(src, onSuccess, onError);
+        } // else play current audio
         // Play audio
         my_media.play();
 
@@ -53,7 +55,7 @@
     }
 
     // Pause audio
-    // 
+    //
     function pauseAudio() {
         if (my_media) {
             my_media.pause();
@@ -61,7 +63,7 @@
     }
 
     // Stop audio
-    // 
+    //
     function stopAudio() {
         if (my_media) {
             my_media.stop();
@@ -76,15 +78,15 @@
         console.log("playAudio():Audio Success");
     }
 
-    // onError Callback 
+    // onError Callback
     //
     function onError(error) {
-        alert('code: '    + error.code    + '\n' + 
+        alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
 
     // Set audio position
-    // 
+    //
     function setAudioPosition(position) {
         document.getElementById('audio_position').innerHTML = position;
     }
@@ -98,3 +100,4 @@
     <p id="audio_position"></p>
   </body>
 </html>
+

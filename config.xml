@@ -4,7 +4,9 @@
     id              = "com.mcainternet.trap"
     version         = "0.1">
 
-    <plugin name="Media" value="org.apache.cordova.AudioHandler" />
+    <feature name="Media">
+    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+    </feature>
 
     <name>MCATrap</name>
 
