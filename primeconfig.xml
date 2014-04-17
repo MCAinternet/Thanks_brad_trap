@@ -1,0 +1,25 @@
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+    xmlns:gap       = "http://phonegap.com/ns/1.0"
+    xmlns:android   = "http://schemas.android.com/apk/res/android"
+    id              = "com.mcainternet.trap"
+    version         = "0.1">
+
+    <name>MCATrap</name>
+
+    <description>
+        Tag app.
+    </description>
+
+    <author href="http://www.mcainternet.com" email="brad@mcainternet.com">
+        Brad Hagedorn
+    </author>
+    
+    <access origin="*" />
+    
+    <gap:plugin name="org.apache.cordova.media" />
+
+    <feature name="Media">
+    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+    </feature>
+
+</widget>
