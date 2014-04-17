@@ -14,12 +14,8 @@
         Brad Hagedorn
     </author>
     
-    <access origin="*" />
-    
     <gap:plugin name="org.apache.cordova.media" />
-
-    <feature name="Media">
-    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
-    </feature>
+    
+    <access origin="*" />
 
 </widget>
