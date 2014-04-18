@@ -22,7 +22,10 @@
 		<param name="android-package" value="org.apache.cordova.media.AudioHandler" />
 	</feature>
 	
-	
+	<!---
+    < preference name="exit-on-suspend" value="true" />
+    < preference name="android-installLocation" value="auto" />
+    --->
 
 
 </widget>
