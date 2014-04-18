@@ -27,9 +27,10 @@
     //
     function playAudio(src) {
         console.log("function playAudio(src) is called on " + src );
+        if (my_media === null) {
             // Create Media object from src
             my_media = new Media(src, onSuccess, onError);
-        // else play current audio
+        } // else play current audio
         // Play audio
         my_media.play();
 
