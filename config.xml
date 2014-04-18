@@ -22,6 +22,11 @@
 		<param name="android-package" value="org.apache.cordova.media.AudioHandler" />
 	</feature>
 	
+	<icon src="app.png" width="128" height="128"/>
+
+    <gap:splash src="app_splash.png" />
+
+
 	<!---
     < preference name="exit-on-suspend" value="true" />
     < preference name="android-installLocation" value="auto" />
